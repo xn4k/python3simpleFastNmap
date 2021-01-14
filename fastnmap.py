@@ -27,6 +27,7 @@ print("Your selected option is: ", outp)
 #You can specify ports in scan type like: fastnmap.scan(the_ip, '1-1024' '-A -O -T4 -p-')
 
 #OS detection, version detection, script scanning, and traceroute. All Ports, Aggressive, fast
+
 if outp == '1':
     print("Nmap Type: ", fastnmap.nmap_version())
     fastnmap.scan(the_ip, '1-65535', '-A -O -T4 -v')                    
@@ -35,6 +36,7 @@ if outp == '1':
     print(fastnmap[the_ip].all_protocols())
     print("Ports are open: ", fastnmap[the_ip]['tcp'].keys())
 #Full TCP port scan using with service version detection
+
 elif outp == '2':
     print("Nmap Type: ", fastnmap.nmap_version())
     fastnmap.scan(the_ip, '1-65535', '-sV -sS -T4 -v')
@@ -43,6 +45,7 @@ elif outp == '2':
     print(fastnmap[the_ip].all_protocols())
     print("Ports are open: ", fastnmap[the_ip]['tcp'].keys())
 #UDP scan, show smt. false positives. Reveal Trojans running on  UDP ports/ hidden RPC services.
+
 elif outp == '3':
     print("Nmap Type: ", fastnmap.nmap_version())
     fastnmap.scan(the_ip, '1-65535', '-v -sU')

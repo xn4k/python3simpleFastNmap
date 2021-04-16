@@ -1,4 +1,4 @@
 # python3simpleFastNmap
-Simple additionale Automatisation 
+Simple nmap Automatisation 
 I dont know what this weird coded thing is, 
 I am sorry.
